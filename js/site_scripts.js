@@ -1158,6 +1158,9 @@ function DocHelper(){
         });
         var active = docs.find('li.active.last');
         if(active.length){
+            active.addClass('active');
+            active.find('> .caret-container > .fa-caret-right').removeClass('fa-caret-right').addClass('fa-caret-down');
+            active.find('> ul').addClass('in');
             for(var i=0;i<4;++i){
                 active = active.parent().parent();
                 if(active.is('li')){
@@ -1167,6 +1170,11 @@ function DocHelper(){
                 }else{
                     break;
                 }
+            }
+        }else{
+            if(menu.find('> ul > li').length === 1){
+                menu.find('> ul > li > .caret-container > .fa-caret-right').removeClass('fa-caret-right').addClass('fa-caret-down');
+                menu.find('> ul > li > ul').addClass('in');
             }
         }
     }
