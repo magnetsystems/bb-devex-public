@@ -8,8 +8,8 @@ $(document).ready(function(){
     if(r2m.length) initR2M(r2m);
     var mmx = $('#messaging-demo');
     if(mmx.length) initMessaging(mmx);
-    var mp = $('#persistence-body');
-    if(mp.length) initPersistence();
+//    var mp = $('#persistence-body');
+//    if(mp.length) initPersistence();
 });
 function bindEvents(){
     $.fn.vAR = function(){
@@ -146,7 +146,7 @@ function changeSelect(dom, sel){
 
 function initMessaging(container){
     var editor;
-    container.find('input').val('Hello World!');
+    container.find('input').val('Hello, this is a message sent from the Magnet Messaging Server.');
     var code = $('#messaging-demo-code');
     var output = container.find('#messaging-demo-phone-wrapper > div');
     container.find('.btn').click(function(){

@@ -1,0 +1,89 @@
+
+@font-face {
+	font-family: 'Regular';
+	src: url("fonts/magnet-font.ttf");
+}
+/* 
+@font-face { 
+	font-family: 'One'; 
+	src: url("fonts/magnet-font.ttf"); 
+	}
+*/
+@font-face {
+	font-family: 'Two';
+	src: url("fonts/magnet-font.ttf");
+}
+
+@font-face {
+	font-family: 'Three';
+	src: url("fonts/magnet-font.ttf");
+}
+
+@font-face {
+	font-family: 'Display';
+	src: url("fonts/magnet-font.ttf");
+}
+
+@font-face {
+	font-family: 'Inline';
+	src: url("fonts/magnet-font.ttf");
+}
+
+.icon {
+	display:block;
+	position: relative;
+	top:10px;
+	left:5px;
+	border-radius: 10px;
+	max-width:1190px
+}
+#second, #third{
+	display:block;
+	position: absolute;
+	top:10px;
+	left:5px;
+}
+/* 
+#first{
+	font:5em 'One';
+}
+
+#second{
+	font-family: 'Two';
+	color:rgba(176,176,176,1);
+}
+#third{
+	font-family: 'Three';
+	color: rgba(71,151,210,1);
+}
+
+.layer:before{
+	font-family: 'Two';
+	color:rgba(176,176,176,1);
+}
+.layer:after{
+	font-family: 'Three';
+	color: rgba(71,151,210,1);
+}
+*/
+.icon:before {
+	position:absolute;
+	top:0;
+	left:0;
+	margin-left:.5em;
+	content: attr(text);
+	font-family:'Two';
+	color:rgba(176,176,176,.99);
+}
+
+.icon:after {
+	position:absolute;
+	top:0;
+	left:0;
+	margin-left:.5em;
+	content: attr(text);
+	font-family:'Three';
+	color: rgba(71,151,210,.99);
+}
+
+	
