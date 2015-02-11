@@ -40,9 +40,8 @@ function bindSameHeightPanel(){
                 isSetting = false;
             }, 800);
         }
-
     });
-    setHeights();
+    setTimeout(setHeights, 300);
 }
 
 function bindCollapsible(){
