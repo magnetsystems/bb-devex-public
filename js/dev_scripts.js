@@ -145,56 +145,57 @@ function changeSelect(dom, sel){
 }
 
 function initMessaging(container){
-    var editor;
-    container.find('input').val('Hello, this is a message sent from the Magnet Messaging Server.');
-    var code = $('#messaging-demo-code');
+    var editor = {};
+    var defaultStr = 'Hello, this is a mobile message.';
+    container.find('input').val(defaultStr);
     var output = container.find('#messaging-demo-phone-wrapper > div');
     container.find('.btn').click(function(){
         var select = container.find('select');
         var input = container.find('input');
         output.html('<img src="/img/site/ajax-loader-sm.gif" />');
         setTimeout(function(){
-            output.text(input.val());
+            output.html('<div><p>'+input.val()+'</p><div>OK</div></div>');
         }, (Math.floor((Math.random() * 1300) + 100)));
-        showMessagingCode(select.val(), input.val());
+        showMessagingCode(select.val(), 'android', input.val());
+        showMessagingCode(select.val(), 'ios', input.val());
     });
-    function showMessagingCode(did, val){
-        if(editor){
-            editor.destroy();
-            editor = undefined;
+    function showMessagingCode(msgType, platform, val){
+        var code = $('#messaging-demo-'+platform+'-code');
+        if(editor[platform]){
+            editor[platform].destroy();
+            delete editor[platform];
             code.html('');
         }
-        did = did.split('-');
         var lang;
-        switch(did[1]){
+        switch(platform){
             case 'android': lang = 'java'; break;
             case 'ios': lang = 'objectivec'; break;
-            case 'js': lang = 'javascript'; break;
         }
-        code.html('<div id="'+did[1]+'-code"></div>');
-        editor = ace.edit(did[1]+'-code');
-        editor.setOptions({
+        code.html('<div id="'+platform+'-code"></div>');
+        editor[platform] = ace.edit(platform+'-code');
+        editor[platform].setOptions({
             maxLines: Infinity
         });
-        editor.setTheme('ace/theme/chrome');
-        editor.getSession().setMode('ace/mode/'+lang);
-        editor.setShowPrintMargin(false);
-        editor.renderer.setShowGutter(false);
-        editor.renderer.setScrollMargin(8, 8, 12, 12);
-        editor.setHighlightActiveLine(false);
-        editor.getSession().setUseWrapMode(true);
-        editor.setOptions({
+        editor[platform].setTheme('ace/theme/chrome');
+        editor[platform].getSession().setMode('ace/mode/'+lang);
+        editor[platform].setShowPrintMargin(false);
+        editor[platform].renderer.setShowGutter(false);
+        editor[platform].renderer.setScrollMargin(8, 8, 12, 12);
+        editor[platform].setHighlightActiveLine(false);
+        editor[platform].getSession().setUseWrapMode(true);
+        editor[platform].setOptions({
             minLines : 1
         });
         var tmpl = new EJS({
-            element : 'sample-'+did[0]+'-'+did[1]
+            element : 'sample-'+msgType+'-'+platform
         });
-        editor.setValue(tmpl.render({
+        editor[platform].setValue(tmpl.render({
             val : val
         }), 1);
-        editor.gotoLine(1);
+        editor[platform].gotoLine(1);
     }
-    showMessagingCode('push-android', 'Hello World!');
+    showMessagingCode('push', 'android', defaultStr);
+    showMessagingCode('push', 'ios', defaultStr);
 }
 
 function initPersistence(){

@@ -238,6 +238,7 @@ function bindFeedbackButton(){
 
 function bindNewsletterSignup(){
     $('.newsletter-signup-btn').click(function(){
+        var btn = $(this);
         var form = $(this).closest('.form-group');
         var parent = form.length ? form : $(this).closest('.modal-content');
         var input = parent.find('input[name="email"]');
@@ -259,6 +260,8 @@ function bindNewsletterSignup(){
         }).done(function(){
             var title = 'All Set!';
             var content = 'You have been registered to receive our newsletter.';
+            if(btn.attr('success'))
+                content = btn.attr('success');
             if(form.length){
                 parent.html('<div class="alert alert-success" role="alert"><strong>'+title+'</strong> <span>'+content+'</span></div>');
             }else{
