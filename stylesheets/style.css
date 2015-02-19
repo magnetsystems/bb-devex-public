@@ -283,6 +283,8 @@ h4.step-title{font-weight:600;color:#ccc;float:left;margin-left:-50px;margin-rig
 .iframe-spacing div div{position:relative;width:80%;margin:0 auto;height:0;padding-bottom:45%}
 .iframe-spacing p{max-width:560px;margin:8px auto;padding:0 20px;color:#bbb;font-size:13px;font-weight:500}
 
+.yt-placeholder-btn{cursor:pointer}
+
 /* PAGES */
 
 /* home */
@@ -361,7 +363,7 @@ h4.step-title{font-weight:600;color:#ccc;float:left;margin-left:-50px;margin-rig
 #messaging-form .form-group{float:left;width:50%}
 #messaging-form input{margin-left:10px}
 #messaging-form .btn{padding:8px 12px 8px 20px}
-/*#messaging-demo-code{width:100%;margin-top:63px;padding:14px;min-height:300px;background:#fff;border-radius:8px;border:1px solid #ccc;box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset}*/
+#messaging-demo-code{width:100%;margin-top:63px;padding:14px;min-height:300px;background:#fff;border-radius:8px;border:1px solid #ccc;box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset}
 /*#messaging-demo-code > div{height:400px;width:100%;border-radius:8px;text-align:left}*/
 #messaging-demo-phone{margin:0 auto;max-width:200px;position:relative}
 #messaging-demo-phone-wrapper{position:absolute;top:50px;left:0;height:263px;width:100%}

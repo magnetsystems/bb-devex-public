@@ -152,19 +152,20 @@ function initMessaging(container){
     container.find('.btn').click(function(){
         var select = container.find('select');
         var selectVal = select.val();
+        selectVal = selectVal.split('-');
         var input = container.find('input');
         output.html('<img src="/img/site/ajax-loader-sm.gif" />');
         setTimeout(function(){
-            if(selectVal == 'message')
+            if(selectVal[0] == 'message')
                 output.html(input.val());
             else
                 output.html('<div><p>'+input.val()+'</p><div>OK</div></div>');
         }, (Math.floor((Math.random() * 1300) + 100)));
-        showMessagingCode(selectVal, 'android', input.val());
-        showMessagingCode(selectVal, 'ios', input.val());
+        showMessagingCode(selectVal[0], selectVal[1], input.val());
+//        showMessagingCode(selectVal, 'ios', input.val());
     });
     function showMessagingCode(msgType, platform, val){
-        var code = $('#messaging-demo-'+platform+'-code');
+        var code = $('#messaging-demo-code'); // $('#messaging-demo-'+platform+'-code');
         if(editor[platform]){
             editor[platform].destroy();
             delete editor[platform];
@@ -199,7 +200,7 @@ function initMessaging(container){
         editor[platform].gotoLine(1);
     }
     showMessagingCode('push', 'android', defaultStr);
-    showMessagingCode('push', 'ios', defaultStr);
+//    showMessagingCode('push', 'ios', defaultStr);
 }
 
 function initPersistence(){

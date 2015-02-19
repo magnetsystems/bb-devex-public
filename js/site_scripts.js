@@ -360,6 +360,9 @@ function bindWatchVideo(){
             ytVideoPlayer.stopVideo();
         });
     }
+    $('.yt-placeholder-btn').click(function(){
+        $(this).replaceWith('<iframe src="https://www.youtube.com/embed/'+$(this).attr('did')+'?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+    });
 }
 
 function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight){
