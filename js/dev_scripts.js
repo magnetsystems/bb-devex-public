@@ -199,8 +199,8 @@ function initMessaging(container){
         }), 1);
         editor[platform].gotoLine(1);
     }
-    showMessagingCode('push', 'android', defaultStr);
-//    showMessagingCode('push', 'ios', defaultStr);
+    showMessagingCode('message', 'android', defaultStr);
+//    showMessagingCode('message', 'ios', defaultStr);
 }
 
 function initPersistence(){
