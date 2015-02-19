@@ -151,13 +151,17 @@ function initMessaging(container){
     var output = container.find('#messaging-demo-phone-wrapper > div');
     container.find('.btn').click(function(){
         var select = container.find('select');
+        var selectVal = select.val();
         var input = container.find('input');
         output.html('<img src="/img/site/ajax-loader-sm.gif" />');
         setTimeout(function(){
-            output.html('<div><p>'+input.val()+'</p><div>OK</div></div>');
+            if(selectVal == 'message')
+                output.html(input.val());
+            else
+                output.html('<div><p>'+input.val()+'</p><div>OK</div></div>');
         }, (Math.floor((Math.random() * 1300) + 100)));
-        showMessagingCode(select.val(), 'android', input.val());
-        showMessagingCode(select.val(), 'ios', input.val());
+        showMessagingCode(selectVal, 'android', input.val());
+        showMessagingCode(selectVal, 'ios', input.val());
     });
     function showMessagingCode(msgType, platform, val){
         var code = $('#messaging-demo-'+platform+'-code');

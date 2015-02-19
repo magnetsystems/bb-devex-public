@@ -45,7 +45,7 @@ body > img{display:none}
 #github-btn:hover, #github-btn:active{background:url(/img/developer/btn_github_active.png) no-repeat 0 0}
 #github-btn div{position:absolute;bottom:35px;left:26px;line-height:18px}
 
-#footer{background:#000;color:#808284;font-size:11px;padding:8px 30px 4px;border-top:solid 1px #ccc}
+#footer{background:#000;color:#808284;font-size:11px;padding:8px 30px 4px}
 #footer .col-sm-6{padding:0}
 #footer .footer-link{font-size:12px;text-decoration:underline;color:#808284}
 
@@ -82,6 +82,7 @@ pre{background:#666;color:#efefef;border-radius:8px;padding:8px 13px;border:none
 /* links */
 a{text-decoration:underline;color:#bf282d}
 .btn{text-decoration:none;color:#fff;font-weight:400;min-width:236px;border-radius:6px;margin-top:7px;padding:8px 12px;font-size:15px}
+.btn-default{color:#222}
 .btn-danger{background:#694444;border:solid 2px #669DB6;color:#fff}
 .btn-danger.active, .btn-danger:hover, .btn-danger:active{background:#947070;border:solid 2px #465C6D;color:#fff}
 .btn-primary{background-color:#4797D3;background-image:-webkit-gradient(linear,left top,left bottom,from(#4797D3),to(#275A80));background-image:-webkit-linear-gradient(top,#4797D3,#275A80);background-image:-moz-linear-gradient(top,#4797D3,#275A80);background-image:-ms-linear-gradient(top,#4797D3,#275A80);background-image:-o-linear-gradient(top,#4797D3,#275A80);background-image:linear-gradient(to bottom,#4797D3,#275A80);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4797D3,endColorstr=#275A80)}
@@ -273,7 +274,7 @@ h4.step-title{font-weight:600;color:#ccc;float:left;margin-left:-50px;margin-rig
 .tabbed-demo .nav-tabs li.active a{background:none;border:none}
 .tabbed-demo .tabs-backgrounded li .nav-tab-item{padding:0}
 .tabbed-demo .tab-content{margin-top:-1px;background:#fff;border-radius:8px;padding:10px;text-align:left}
-.tabbed-demo .tab-pane pre{display:inline;border-radius:0;line-height:inherit;background:none;margin:0;padding:0;border:none;white-space: pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap; word-wrap:break-word}
+.tabbed-demo .tab-pane pre{display:inline;border-radius:0;line-height:inherit;background:none;margin:0;padding:0;border:none;white-space: pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap}
 
 .iframe-spacing{padding:25px 0}
 .iframe-spacing h3{margin-bottom:20px}
@@ -366,7 +367,7 @@ h4.step-title{font-weight:600;color:#ccc;float:left;margin-left:-50px;margin-rig
 #messaging-demo-phone-wrapper{position:absolute;top:50px;left:0;height:263px;width:100%}
 #messaging-demo-phone-wrapper > div{text-align:left;height:100%;width:90%;background:#000;margin:0 auto;padding:8px}
 #messaging-demo-phone-wrapper > div > div{border-radius:6px;padding:6px;margin:17px 6px 2px;background:#fff}
-#messaging-demo-phone-wrapper > div > div p{color:#333;text-align:center;word-wrap:break-word;white-space:pre-wrap}
+#messaging-demo-phone-wrapper > div > div p{color:#333;text-align:center;word-wrap:break-word;white-space:pre-wrap;word-break:break-all;-ms-word-break:break-all;}
 #messaging-demo-phone-wrapper > div > div > div{text-align:center;padding:6px;border-radius:6px;color:#fff;background:#4898D3}
 #messaging-demo-phone-wrapper img{margin-top:100px;margin-left:68px}
 #messaging-demo-phone .img-responsive{margin:0 auto;border:3px solid #eee;border-radius:28px}
