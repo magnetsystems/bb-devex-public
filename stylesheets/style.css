@@ -1,6 +1,7 @@
 /* LAYOUT */
 
 html, body{background:#4d4d4d;height:100%;font-size:15px;font-weight:300;font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}
+.view-factory{background:#ccc}
 body > img{display:none}
 #head{background:#000;color:#efefef;padding:3px 7px;font-size:18px;height:54px}
 #head-logo{float:left}
@@ -419,6 +420,10 @@ h4.step-title{font-weight:600;color:#ccc;float:left;margin-left:-50px;margin-rig
 #docs-search-results span{color:#999;font-size:13px}
 #docs-search-results #search-meta{margin:15px 0;font-size:12px;color:#999}
 #docs-search-results button{margin-right:8px}
+
+/* error */
+.error-page{margin:14px}
+.error-page h3{font-size:40px}
 
 /* THIRD PARTY */
 
